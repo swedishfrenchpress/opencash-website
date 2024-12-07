@@ -1,6 +1,9 @@
+'use client'
+
 import Image from "next/image";
 import { Roboto_Mono as RobotoMono } from 'next/font/google';
 import { Crimson_Text as CrimsonText } from 'next/font/google';
+import { RevealOnScroll } from './components/RevealOnScroll';
 
 const robotoMono = RobotoMono({
   subsets: ['latin'],
@@ -54,65 +57,68 @@ export default function Home() {
         <div className="absolute inset-0 bg-white opacity-75" />
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-200/40 to-blue-400/40" />
 
-        {/* Content repositioned higher from bottom */}
         <div className="relative h-full flex flex-col justify-end z-10 max-w-7xl mx-auto px-28 pb-48">
-          <div className="max-w-8xl">
-            <Image 
-              src="/opencash-logo.svg" 
-              alt="OpenCash Large Logo" 
-              width={400} 
-              height={60}
-              className="mb-8"
-            />
-            <h1 className="text-7xl text-zinc-800 font-medium mb-4 text-left">
-              Support the open-source development of Digital Cash
-            </h1>
-            <button className="bg-zinc-800 text-white font-semibold text-xl px-8 py-6 rounded-md hover:bg-zinc-700 mt-4">
-              Donate now
-            </button>
-            
-            {/* Supported By Logos */}
-            <div className="mt-16">
-              <p className={`text-gray-600 text-3xl mb-8 text-left uppercase ${robotoMono.className}`}>Supported by</p>
-              <div className="flex items-center gap-12">
-                <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center w-64 h-32">
-                  <Image
-                    src="/block.png"
-                    alt="Block Logo"
-                    width={160}
-                    height={80}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center w-64 h-32">
-                  <Image
-                    src="/hrf.png"
-                    alt="Human Rights Foundation Logo"
-                    width={200}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center w-64 h-32">
-                  <Image
-                    src="/strike.webp"
-                    alt="Strike Logo"
-                    width={240}
-                    height={80}
-                    className="object-contain invert"
-                  />
+          <RevealOnScroll>
+            <div className="max-w-8xl">
+              <Image 
+                src="/opencash-logo.svg" 
+                alt="OpenCash Large Logo" 
+                width={400} 
+                height={60}
+                className="mb-8"
+              />
+              <h1 className="text-7xl text-zinc-800 font-medium mb-4 text-left">
+                Support the open-source development of Digital Cash
+              </h1>
+              <button className="bg-zinc-800 text-white font-semibold text-xl px-8 py-6 rounded-md hover:bg-zinc-700 mt-4">
+                Donate now
+              </button>
+              
+              {/* Supported By Logos */}
+              <div className="mt-16">
+                <p className={`text-gray-600 text-3xl mb-8 text-left uppercase ${robotoMono.className}`}>Supported by</p>
+                <div className="flex items-center gap-12">
+                  <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center w-64 h-32">
+                    <Image
+                      src="/block.png"
+                      alt="Block Logo"
+                      width={160}
+                      height={80}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center w-64 h-32">
+                    <Image
+                      src="/hrf.png"
+                      alt="Human Rights Foundation Logo"
+                      width={200}
+                      height={100}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center w-64 h-32">
+                    <Image
+                      src="/strike.webp"
+                      alt="Strike Logo"
+                      width={240}
+                      height={80}
+                      className="object-contain invert"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
         </div>
       </section>
 
       {/* Vision Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-28">
-          <p className="text-gray-600 uppercase tracking-wider text-sm mb-8">Our Vision</p>
-          <h2 className="text-[64px] mb-24 text-zinc-800">A world with digital cash</h2>
+          <RevealOnScroll>
+            <p className="text-gray-600 uppercase tracking-wider text-sm mb-8">Our Vision</p>
+            <h2 className="text-[64px] mb-24 text-zinc-800">A world with digital cash</h2>
+          </RevealOnScroll>
 
           {/* Three Column Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-24 relative select-text">
@@ -143,15 +149,17 @@ export default function Home() {
                 content: "The Cashu protocol exemplifies the promise of privacy-respecting digital cash. Its open-source design ensures that anyone can participate in creating a sustainable and inclusive financial system. Dive deeper into the Cashu protocol and discover its transformative potential here."
               }
             ].map((column, index) => (
-              <div key={index} className="px-8">
-                <p className="text-3xl text-gray-400 mb-32">{column.number}</p>
-                <h4 className="text-2xl text-gray-800 font-semibold mb-6">
-                  {column.title}
-                </h4>
-                <p className="text-gray-600 font-medium">
-                  {column.content}
-                </p>
-              </div>
+              <RevealOnScroll key={index}>
+                <div className="px-8">
+                  <p className="text-3xl text-gray-400 mb-32">{column.number}</p>
+                  <h4 className="text-2xl text-gray-800 font-semibold mb-6">
+                    {column.title}
+                  </h4>
+                  <p className="text-gray-600 font-medium">
+                    {column.content}
+                  </p>
+                </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
@@ -159,43 +167,47 @@ export default function Home() {
 
       {/* Quote Section */}
       <section className="bg-black text-white py-48">
-        <div className="max-w-7xl mx-auto px-28 flex gap-12 items-center">
-          <div className="w-1/3">
-            <Image 
-              src="/chaum.jpg" 
-              alt="Quote Author" 
-              width={300} 
-              height={300}
-              className="grayscale rounded-sm"
-            />
+        <RevealOnScroll>
+          <div className="max-w-7xl mx-auto px-28 flex gap-12 items-center">
+            <div className="w-1/3">
+              <Image 
+                src="/chaum.jpg" 
+                alt="Quote Author" 
+                width={300} 
+                height={300}
+                className="grayscale rounded-sm"
+              />
+            </div>
+            <div className="w-2/3 space-y-6">
+              <blockquote className={`text-3xl leading-relaxed ${crimsonText.className}`}>
+                "...in one direction lies unprecedented scrutiny and control of people's lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates."
+              </blockquote>
+              <p className="text-gray-400 text-xl">— David Chaum 1992</p>
+            </div>
           </div>
-          <div className="w-2/3 space-y-6">
-            <blockquote className={`text-3xl leading-relaxed ${crimsonText.className}`}>
-              "...in one direction lies unprecedented scrutiny and control of people's lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates."
-            </blockquote>
-            <p className="text-gray-400 text-xl">— David Chaum 1992</p>
-          </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* Board Section */}
       <section className="py-20 bg-zinc-50">
-        <div className="max-w-7xl mx-auto px-28 text-center">
-          <p className="text-gray-600 uppercase tracking-wider text-sm">Our Board</p>
-          <h2 className="text-[64px] mb-8 text-zinc-800">Meet our board</h2>
-          <p className="text-gray-600 mt-2 text-lg font-medium max-w-3xl mx-auto mb-12">
-          The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian Ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
-          </p>
-          <div className="flex justify-center items-center">
-            <Image 
-              src="/board.jpg" 
-              alt="Board Members" 
-              width={400} 
-              height={400}
-              className="rounded-sm"
-            />
+        <RevealOnScroll>
+          <div className="max-w-7xl mx-auto px-28 text-center">
+            <p className="text-gray-600 uppercase tracking-wider text-sm">Our Board</p>
+            <h2 className="text-[64px] mb-8 text-zinc-800">Meet our board</h2>
+            <p className="text-gray-600 mt-2 text-lg font-medium max-w-3xl mx-auto mb-12">
+            The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian Ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
+            </p>
+            <div className="flex justify-center items-center">
+              <Image 
+                src="/board.jpg" 
+                alt="Board Members" 
+                width={400} 
+                height={400}
+                className="rounded-sm"
+              />
+            </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* Footer */}
