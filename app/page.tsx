@@ -218,8 +218,10 @@ export default function Home() {
 
             {/* Cashu Ecosystem */}
             <div className="pl-32">
-              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Cashu ecosystem</p>
-              <p>Cashu.space</p>
+              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Cashu</p>
+              <a href="https://www.cashu.space" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+                Cashu.space
+              </a>
             </div>
           </div>
 
@@ -228,7 +230,7 @@ export default function Home() {
             <Image 
               src="/opencash-logomark.svg" 
               alt="OpenCash Logo" 
-              width={600} 
+              width={400} 
               height={40}
               className="invert"
             />
