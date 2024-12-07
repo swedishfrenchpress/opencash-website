@@ -218,14 +218,14 @@ export default function Home() {
             {/* Location Section */}
             <div className="pr-32">
               <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Location</p>
-              <p className="mb-2">OpenCash Association</p>
-              <p>Zug 6300, Switzerland</p>
+              <p className="whitespace-nowrap">Opencash Association</p>
+              <p className="whitespace-nowrap">4613 Rickenbach, Switzerland</p>
             </div>
             
             {/* Contact Section */}
             <div className="px-32">
               <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Contact</p>
-              <p>opencash@protonmail.ch</p>
+              <p className="whitespace-nowrap">opencash@protonmail.ch</p>
             </div>
 
             {/* Cashu Ecosystem */}
