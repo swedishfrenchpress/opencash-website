@@ -201,25 +201,37 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-black text-white py-12">
         <div className="max-w-7xl mx-auto px-28">
-          <div className="flex justify-between items-start">
-            {/* Left column */}
-            <div>
-              <Image 
-                src="/opencash-logo.svg" 
-                alt="OpenCash Logo" 
-                width={200} 
-                height={40}
-                className="invert"
-              />
+          {/* Footer Content */}
+          <div className="flex justify-between items-start mb-16 divide-x divide-gray-800">
+            {/* Location Section */}
+            <div className="pr-32">
+              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Location</p>
+              <p className="mb-2">OpenCash Association</p>
+              <p>Zug 6300, Switzerland</p>
             </div>
             
-            {/* Right column */}
-            <div className="text-right">
-              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Contact us</p>
-              <p className="mb-2">OpenCash Association</p>
-              <p className="mb-2">Zug 6300, Switzerland</p>
+            {/* Contact Section */}
+            <div className="px-32">
+              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Contact</p>
               <p>opencash@protonmail.ch</p>
             </div>
+
+            {/* Cashu Ecosystem */}
+            <div className="pl-32">
+              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Cashu ecosystem</p>
+              <p>Cashu.space</p>
+            </div>
+          </div>
+
+          {/* Logomark below */}
+          <div className="flex justify-center">
+            <Image 
+              src="/opencash-logomark.svg" 
+              alt="OpenCash Logo" 
+              width={600} 
+              height={40}
+              className="invert"
+            />
           </div>
         </div>
       </footer>
