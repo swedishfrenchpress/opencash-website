@@ -5,6 +5,7 @@ import { Roboto_Mono as RobotoMono } from 'next/font/google';
 import { Crimson_Text as CrimsonText } from 'next/font/google';
 import { RevealOnScroll } from './components/RevealOnScroll';
 import { ScrambleText } from './components/ScrambleButton';
+import { SectionTransition } from './components/SectionTransition'
 
 const robotoMono = RobotoMono({
   subsets: ['latin'],
@@ -70,7 +71,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-200/40 to-blue-400/40" />
 
         <div className="relative min-h-screen flex flex-col justify-start md:justify-end z-10 max-w-7xl mx-auto px-6 md:px-28 pb-12 md:pb-48">
-          <RevealOnScroll>
+          <SectionTransition>
             <div className="max-w-8xl pt-24 md:pt-0">
               <Image 
                 src="/opencash-logo.svg" 
@@ -127,30 +128,27 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </RevealOnScroll>
+          </SectionTransition>
         </div>
       </section>
 
       {/* Vision Section */}
       <section id="vision" className="py-12 md:py-20 bg-zinc-50">
         <div className="max-w-7xl mx-auto px-6 md:px-28">
-          <RevealOnScroll>
-            <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Vision</p>
-            <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800">A world with digital cash.</h2>
-          </RevealOnScroll>
+          <SectionTransition>
+            <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">
+              Our Vision
+            </p>
+          </SectionTransition>
+          
+          <SectionTransition delay={0.2}>
+            <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800">
+              A world with digital cash.
+            </h2>
+          </SectionTransition>
 
           {/* Three Column Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 relative select-text">
-            {/* Hide vertical lines on mobile */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none hidden md:block">
-              <div className="grid grid-cols-3 h-full mx-0">
-                <div className="border-l border-r border-gray-200 h-full"></div>
-                <div className="border-r border-gray-200 h-full"></div>
-                <div></div>
-              </div>
-            </div>
-
-            {/* Content columns with standardized mobile padding */}
             {[
               {
                 number: "Why?",
@@ -168,9 +166,15 @@ export default function Home() {
                 content: "We support the development of free and open tools like the Cashu protocol. This empowers individuals and communities to create better financial systems together."
               }
             ].map((column, index) => (
-              <RevealOnScroll key={index}>
+              <SectionTransition 
+                key={index}
+                delay={0.2 * (index + 1)}
+                className={`relative ${index > 0 ? 'md:border-l md:border-gray-200' : ''}`}
+              >
                 <div className="px-4 md:px-8">
-                  <p className="text-2xl md:text-3xl text-gray-400 mb-8 md:mb-32">{column.number}</p>
+                  <p className="text-2xl md:text-3xl text-gray-400 mb-8 md:mb-32">
+                    {column.number}
+                  </p>
                   <h4 className="text-2xl text-gray-800 font-semibold mb-6">
                     {column.title}
                   </h4>
@@ -178,7 +182,7 @@ export default function Home() {
                     {column.content}
                   </p>
                 </div>
-              </RevealOnScroll>
+              </SectionTransition>
             ))}
           </div>
         </div>
@@ -186,38 +190,40 @@ export default function Home() {
 
       {/* Quote Section */}
       <section className="bg-black text-white py-24 md:py-48">
-        <RevealOnScroll>
-          <div className="max-w-7xl mx-auto px-6 md:px-28 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-            <div className="w-full md:w-1/3">
-              <Image 
-                src="/chaum.jpg" 
-                alt="Quote Author" 
-                width={300}
-                height={300}
-                className="grayscale rounded-sm w-full md:w-[300px] object-cover"
-              />
-              <p className="text-gray-500 text-sm mt-2">Photo courtesy of Piaras Ó Mídheach</p>
-            </div>
-            <div className="w-full md:w-2/3 space-y-4 md:space-y-6">
+        <div className="max-w-7xl mx-auto px-6 md:px-28 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+          <div className="w-full md:w-1/3">
+            <Image 
+              src="/chaum.jpg" 
+              alt="Quote Author" 
+              width={300}
+              height={300}
+              className="grayscale rounded-sm w-full object-cover"
+            />
+            <p className="text-gray-500 text-sm mt-2">
+              Photo courtesy of Piaras Ó Mídheach
+            </p>
+          </div>
+          <div className="w-full md:w-2/3 space-y-4 md:space-y-6">
+            <SectionTransition>
               <blockquote className={`text-xl md:text-3xl leading-relaxed ${crimsonText.className}`}>
                 "...in one direction lies unprecedented scrutiny and control of people's lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates."
               </blockquote>
               <p className="text-gray-400 text-lg md:text-xl">— David Chaum 1992</p>
-            </div>
+            </SectionTransition>
           </div>
-        </RevealOnScroll>
+        </div>
       </section>
 
       {/* Board Section */}
       <section id="board" className="py-12 md:py-20 bg-zinc-50">
-        <RevealOnScroll>
+        <SectionTransition>
           <div className="max-w-7xl mx-auto px-6 md:px-28">
             <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Board</p>
             <h2 className="text-4xl md:text-[64px] mb-8 text-zinc-800">Who we are.</h2>
             <p className="text-gray-600 mt-2 text-lg font-medium max-w-6xl mb-6 md:mb-12">
               The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
             </p>
-            <RevealOnScroll blur>
+            <SectionTransition delay={0.2}>
               <div className="flex justify-center items-center max-w-6xl mx-auto h-[200px] md:h-[400px] w-full">
                 <Image 
                   src="/board.jpg" 
@@ -227,14 +233,14 @@ export default function Home() {
                   className="rounded-sm w-full h-full object-contain"
                 />
               </div>
-            </RevealOnScroll>
+            </SectionTransition>
           </div>
-        </RevealOnScroll>
+        </SectionTransition>
       </section>
 
       {/* Donation Section */}
       <section className="bg-black text-white py-24 md:py-48">
-        <RevealOnScroll>
+        <SectionTransition>
           <div className="max-w-7xl mx-auto px-6 md:px-28 flex flex-col md:flex-row gap-8 md:gap-12">
             {/* Left Column - Header */}
             <div className="w-full md:w-1/3">
@@ -262,7 +268,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </RevealOnScroll>
+        </SectionTransition>
       </section>
 
       {/* Footer */}
@@ -274,7 +280,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-6 md:px-28">
           {/* Footer Content - Inside RevealOnScroll */}
-          <RevealOnScroll>
+          <SectionTransition>
             <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 space-y-8 md:space-y-0 md:gap-24">
               {/* Location Section */}
               <div className="w-full md:w-auto">
@@ -297,7 +303,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </RevealOnScroll>
+          </SectionTransition>
 
           {/* Logomark below */}
           <div className="flex justify-center">
