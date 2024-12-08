@@ -33,8 +33,8 @@ export default function Home() {
             />
           </div>
           <div className="flex gap-12 items-center">
-            <a href="#" className={`text-zinc-800 text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>The Vision</a>
-            <a href="#" className={`text-zinc-800 text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>Our Board</a>
+            <a href="#vision" className={`text-zinc-800 text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>The Vision</a>
+            <a href="#board" className={`text-zinc-800 text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>Our Board</a>
           </div>
         </div>
       </nav>
@@ -100,8 +100,8 @@ export default function Home() {
                     <Image
                       src="/strike.webp"
                       alt="Strike Logo"
-                      width={240}
-                      height={80}
+                      width={260}
+                      height={90}
                       className="object-contain invert"
                     />
                   </div>
@@ -113,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-20 bg-white">
+      <section id="vision" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-28">
           <RevealOnScroll>
             <p className="text-gray-600 uppercase tracking-wider text-sm mb-8">Our Vision</p>
@@ -189,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* Board Section */}
-      <section className="py-20 bg-zinc-50">
+      <section id="board" className="py-20 bg-zinc-50">
         <RevealOnScroll>
           <div className="max-w-7xl mx-auto px-28 text-center">
             <p className="text-gray-600 uppercase tracking-wider text-sm">Our Board</p>

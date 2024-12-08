@@ -146,3 +146,7 @@ body {
 * {
   font-family: 'Aeonik', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
