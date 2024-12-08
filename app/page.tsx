@@ -301,16 +301,69 @@ export default function Home() {
 
           {/* Logomark below */}
           <div className="flex justify-center">
-            <Image 
-              src="/opencash-logomark.svg" 
-              alt="OpenCash Logo" 
-              width={400} 
-              height={40}
-              className="invert"
-            />
+            <div 
+              className="relative cursor-pointer select-none"
+              onDragStart={(e) => e.preventDefault()}
+              onClick={(e) => {
+                // Create multiple emojis for an explosion effect
+                for (let i = 0; i < 8; i++) {
+                  const emojis = ['🥜', '🌰', '🐿️'];
+                  const emoji = document.createElement('div');
+                  emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+                  emoji.style.position = 'absolute';
+                  
+                  // Randomize starting positions slightly around the click point
+                  const startOffset = 20;
+                  const randomStartX = e.nativeEvent.offsetX + (Math.random() * startOffset - startOffset/2);
+                  const randomStartY = e.nativeEvent.offsetY + (Math.random() * startOffset - startOffset/2);
+                  
+                  emoji.style.left = `${randomStartX}px`;
+                  emoji.style.top = `${randomStartY}px`;
+                  emoji.style.fontSize = '2rem';
+                  
+                  // More random movement patterns
+                  const angle = Math.random() * Math.PI * 2; // Completely random angles
+                  const velocity = 50 + Math.random() * 100; // More variable velocities
+                  const xDistance = Math.cos(angle) * velocity;
+                  const yDistance = Math.sin(angle) * velocity + 100; // Added gravity bias
+                  const rotation = Math.random() * 360; // Random rotation
+                  
+                  emoji.style.setProperty('--x-move', `${xDistance}px`);
+                  emoji.style.setProperty('--y-move', `${yDistance}px`);
+                  emoji.style.setProperty('--rotation', `${rotation}deg`);
+                  
+                  emoji.style.animation = 'emoji-explosion 1s cubic-bezier(0.15, 0.85, 0.45, 1) forwards';
+                  e.currentTarget.appendChild(emoji);
+                  setTimeout(() => emoji.remove(), 1000);
+                }
+              }}
+            >
+              <Image 
+                src="/opencash-logomark.svg" 
+                alt="OpenCash Logo" 
+                width={400} 
+                height={40}
+                className="invert pointer-events-none"
+                draggable="false"
+              />
+            </div>
           </div>
         </div>
       </footer>
+
+      {/* Static animation keyframes */}
+      <style jsx global>{`
+        @keyframes emoji-explosion {
+          0% {
+            transform: translate(0, 0);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(var(--x-move), var(--y-move)) rotate(var(--rotation));
+            opacity: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
