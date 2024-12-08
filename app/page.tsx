@@ -196,7 +196,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 md:px-28">
             <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Board</p>
             <h2 className="text-4xl md:text-[64px] mb-8 text-zinc-800">Who we are</h2>
-            <p className="text-gray-600 mt-2 text-lg font-medium max-w-6xl mb-12">
+            <p className="text-gray-600 mt-2 text-lg font-medium max-w-6xl mb-6 md:mb-12">
               The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
             </p>
             <div className="flex justify-center items-center max-w-6xl mx-auto h-[400px] w-full">
