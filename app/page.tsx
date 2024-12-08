@@ -190,7 +190,7 @@ export default function Home() {
                 height={300}
                 className="grayscale rounded-sm w-full md:w-[300px] object-cover"
               />
-              <p className="text-gray-500 text-sm mt-2">Courtesy of Piaras Ó Mídheach</p>
+              <p className="text-gray-500 text-sm mt-2">Photo courtesy of Piaras Ó Mídheach</p>
             </div>
             <div className="w-full md:w-2/3 space-y-4 md:space-y-6">
               <blockquote className={`text-xl md:text-3xl leading-relaxed ${crimsonText.className}`}>
@@ -211,15 +211,18 @@ export default function Home() {
             <p className="text-gray-600 mt-2 text-lg font-medium max-w-6xl mb-6 md:mb-12">
               The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
             </p>
-            <div className="flex justify-center items-center max-w-6xl mx-auto h-[400px] w-full">
-              <Image 
-                src="/board.jpg" 
-                alt="Board Members" 
-                width={1200} 
-                height={800}
-                className="rounded-sm w-full h-full object-contain"
-              />
-            </div>
+            <RevealOnScroll blur>
+              <div className="flex justify-center items-center mx-auto h-[400px] w-full">
+                <Image 
+                  src="/board.jpg" 
+                  alt="Board Members" 
+                  width={1200} 
+                  height={800}
+                  className="rounded-sm w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            </RevealOnScroll>
           </div>
         </RevealOnScroll>
       </section>

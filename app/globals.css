@@ -150,3 +150,11 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.reveal-blur {
+  filter: blur(20px);
+}
+
+.reveal-blur.visible {
+  filter: blur(0);
+}
