@@ -89,7 +89,7 @@ export default function Home() {
               >
                 <ScrambleText 
                   text="Donate now"
-                  className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-zinc-700 mt-4"
+                  className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 hover:bg-zinc-700 mt-4"
                 />
               </a>
               
@@ -97,7 +97,7 @@ export default function Home() {
               <div className="mt-8 md:mt-16">
                 <p className={`text-gray-600 text-xl md:text-3xl mb-4 md:mb-8 text-left uppercase ${robotoMono.className}`}>Supported by</p>
                 <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-                  <div className="bg-white p-4 md:p-8 rounded-lg shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
+                  <div className="bg-white p-4 md:p-8 shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                     <Image
                       src="/spiral.svg"
                       alt="Spiral Logo"
@@ -106,7 +106,7 @@ export default function Home() {
                       className="object-contain md:w-[110px] md:h-[80px]"
                     />
                   </div>
-                  <div className="bg-white p-4 md:p-8 rounded-lg shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
+                  <div className="bg-white p-4 md:p-8 shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                     <Image
                       src="/hrf.png"
                       alt="Human Rights Foundation Logo"
@@ -115,7 +115,7 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="bg-white p-4 md:p-8 rounded-lg shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
+                  <div className="bg-white p-4 md:p-8 shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                     <Image
                       src="/strike.webp"
                       alt="Strike Logo"
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Vision Section */}
-      <section id="vision" className="py-12 md:py-20 bg-white">
+      <section id="vision" className="py-12 md:py-20 bg-zinc-50">
         <div className="max-w-7xl mx-auto px-6 md:px-28">
           <RevealOnScroll>
             <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Vision</p>
@@ -256,7 +256,7 @@ export default function Home() {
                 >
                   <ScrambleText 
                     text="Donate now"
-                    className="bg-white text-black font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-gray-100 inline-block"
+                    className="bg-white text-black font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 hover:bg-gray-100 inline-block"
                   />
                 </a>
               </div>
