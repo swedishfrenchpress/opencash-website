@@ -25,7 +25,7 @@ export default function Home() {
       Navigation
       <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30 rounded-b-xl">
         <div className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto px-6 md:px-28">
-          <div className="p-2 rounded">
+          <a href="/" className="p-2 rounded hover:opacity-80 transition-opacity">
             <Image 
               src="/opencash-logomark.svg" 
               alt="OpenCash Logo" 
@@ -33,7 +33,7 @@ export default function Home() {
               height={40}
               className="md:w-[50px] md:h-[50px]"
             />
-          </div>
+          </a>
           <div className="flex gap-6 md:gap-12 items-center">
             <ScrambleText 
               as="a"
@@ -158,7 +158,7 @@ export default function Home() {
                 content: "People deserve payment systems that protect their privacy and ensure security. Digital cash meets this need by offering an alternative to surveillance-based financial systems."
               },
               {
-                number: "What",
+                number: "What?",
                 title: "Digital cash for everyone",
                 content: "Digital cash is a scalable, private, and efficient way to transact. It’s an open tool that anyone can use to build a more secure financial future."
               },
