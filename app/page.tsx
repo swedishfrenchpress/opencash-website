@@ -39,13 +39,13 @@ export default function Home() {
               as="a"
               href="#vision" 
               text="THE VISION"
-              className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}
+              className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-zinc-800 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ${robotoMono.className}`}
             />
             <ScrambleText 
               as="a"
               href="#board" 
               text="OUR BOARD"
-              className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}
+              className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-zinc-800 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ${robotoMono.className}`}
             />
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function Home() {
               >
                 <ScrambleText 
                   text="Donate now"
-                  className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 hover:bg-zinc-700 mt-4"
+                  className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 hover:bg-white hover:text-zinc-800 transition-colors duration-300 mt-4"
                 />
               </a>
               
@@ -256,7 +256,7 @@ export default function Home() {
                 >
                   <ScrambleText 
                     text="Donate now"
-                    className="bg-white text-black font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 hover:bg-gray-100 inline-block"
+                    className="bg-white text-black font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 hover:bg-black hover:text-white transition-colors duration-300 inline-block"
                   />
                 </a>
               </div>
