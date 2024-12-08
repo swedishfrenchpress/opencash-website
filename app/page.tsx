@@ -226,6 +226,31 @@ export default function Home() {
         </RevealOnScroll>
       </section>
 
+      {/* Donation Section */}
+      <section className="bg-black text-white py-24 md:py-48">
+        <RevealOnScroll>
+          <div className="max-w-7xl mx-auto px-6 md:px-28 flex flex-col md:flex-row gap-8 md:gap-12">
+            {/* Left Column - Header */}
+            <div className="w-full md:w-1/3">
+              <h2 className="text-4xl md:text-[64px] text-white leading-tight md:leading-[1.1]">
+                Your donation makes a difference
+              </h2>
+            </div>
+            
+            {/* Right Column - Content */}
+            <div className="w-full md:w-2/3 space-y-6">
+              <p className="text-lg font-medium">
+                We provide funding to developers through our grants program, and we support the broader Cashu ecosystem through our research and events. All projects that we support are open-source and free to use. Help us provide sustainable support for Cashu projects by donating to our fund. Your donation will be used to support developers, fund research, and organize events.
+              </p>
+              <ScrambleText 
+                text="Donate now"
+                className="bg-white text-black font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-gray-100 inline-block"
+              />
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
       {/* Footer */}
       <footer className="bg-black text-white py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-28">
