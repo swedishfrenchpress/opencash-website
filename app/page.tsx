@@ -253,6 +253,11 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-black text-white py-8 md:py-12">
+        {/* Gradient Divider */}
+        <div className="max-w-7xl mx-auto px-6 md:px-28 mb-8 md:mb-12">
+          <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-50" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 md:px-28">
           {/* Footer Content */}
           <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 space-y-8 md:space-y-0 md:gap-24">
@@ -272,7 +277,7 @@ export default function Home() {
             {/* Cashu Ecosystem */}
             <div className="w-full md:w-auto">
               <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Cashu</p>
-              <a href="https://www.cashu.space" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-gray-300">
+              <a href="https://cashu.space/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-gray-300">
                 Cashu.space
               </a>
             </div>
