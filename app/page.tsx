@@ -153,19 +153,19 @@ export default function Home() {
             {/* Content columns with standardized mobile padding */}
             {[
               {
-                number: "01",
-                title: "Privacy-first payments",
-                content: "We support the development of free and open-source digital cash projects using the Cashu protocol. This system prioritizes privacy, scalability, and efficiency for bitcoin and beyond."
+                number: "Why?",
+                title: "The need for privacy",
+                content: "People deserve payment systems that protect their privacy and ensure security. Digital cash meets this need by offering an alternative to surveillance-based financial systems."
               },
               {
-                number: "02",
-                title: "Digital cash matters",
-                content: "Digital cash will shape the future of payments and financial services. Cashu makes secure, private, and scalable transactions accessible to everyone. We believe this technology should be free and open for all."
+                number: "What",
+                title: "Digital cash for everyone",
+                content: "Digital cash is a scalable, private, and efficient way to transact. It’s an open tool that anyone can use to build a more secure financial future."
               },
               {
-                number: "03",
-                title: "Open tools",
-                content: "The Cashu protocol exemplifies the promise of privacy-respecting digital cash. Its open-source design ensures that anyone can participate in creating a sustainable and inclusive financial system."
+                number: "How?",
+                title: "Open-source solutions",
+                content: "We support the development of free and open tools like the Cashu protocol. This empowers individuals and communities to create better financial systems together."
               }
             ].map((column, index) => (
               <RevealOnScroll key={index}>
