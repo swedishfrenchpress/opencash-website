@@ -20,7 +20,7 @@ const crimsonText = CrimsonText({
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       Navigation
       <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30 rounded-b-xl">
         <div className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto px-6 md:px-28">
@@ -147,7 +147,7 @@ export default function Home() {
               {
                 number: "03",
                 title: "Open tools",
-                content: "The Cashu protocol exemplifies the promise of privacy-respecting digital cash. Its open-source design ensures that anyone can participate in creating a sustainable and inclusive financial system. Dive deeper into the Cashu protocol and discover its transformative potential here."
+                content: "The Cashu protocol exemplifies the promise of privacy-respecting digital cash. Its open-source design ensures that anyone can participate in creating a sustainable and inclusive financial system."
               }
             ].map((column, index) => (
               <RevealOnScroll key={index}>
@@ -156,7 +156,7 @@ export default function Home() {
                   <h4 className="text-2xl text-gray-800 font-semibold mb-6">
                     {column.title}
                   </h4>
-                  <p className="text-gray-600 font-medium">
+                  <p className="text-gray-600 text-lg font-medium">
                     {column.content}
                   </p>
                 </div>
@@ -194,8 +194,8 @@ export default function Home() {
       <section id="board" className="py-12 md:py-20 bg-zinc-50">
         <RevealOnScroll>
           <div className="max-w-7xl mx-auto px-6 md:px-28">
-            <p className="text-gray-600 uppercase tracking-wider text-sm">Our Board</p>
-            <h2 className="text-[64px] mb-8 text-zinc-800">Who we are</h2>
+            <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Board</p>
+            <h2 className="text-4xl md:text-[64px] mb-8 text-zinc-800">Who we are</h2>
             <p className="text-gray-600 mt-2 text-lg font-medium max-w-6xl mb-12">
             The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
             </p>
