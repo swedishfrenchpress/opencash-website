@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Roboto_Mono as RobotoMono } from 'next/font/google';
 import { Crimson_Text as CrimsonText } from 'next/font/google';
 import { RevealOnScroll } from './components/RevealOnScroll';
+import { ScrambleText } from './components/ScrambleButton';
 
 const robotoMono = RobotoMono({
   subsets: ['latin'],
@@ -34,8 +35,18 @@ export default function Home() {
             />
           </div>
           <div className="flex gap-6 md:gap-12 items-center">
-            <a href="#vision" className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>The Vision</a>
-            <a href="#board" className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>Our Board</a>
+            <ScrambleText 
+              as="a"
+              href="#vision" 
+              text="THE VISION"
+              className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}
+            />
+            <ScrambleText 
+              as="a"
+              href="#board" 
+              text="OUR BOARD"
+              className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}
+            />
           </div>
         </div>
       </nav>
@@ -71,9 +82,10 @@ export default function Home() {
               <h1 className="text-4xl md:text-7xl text-zinc-800 font-regular mb-4 text-left">
                 Support the open-source development of digital cash.
               </h1>
-              <button className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-zinc-700 mt-4">
-                Donate now
-              </button>
+              <ScrambleText 
+                text="Donate now"
+                className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-zinc-700 mt-4"
+              />
               
               {/* Supported By Logos */}
               <div className="mt-8 md:mt-16">
