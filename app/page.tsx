@@ -225,13 +225,13 @@ export default function Home() {
             </div>
             
             {/* Contact Section */}
-            <div className="px-32">
+            <div className="md:px-32">
               <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Contact</p>
               <p className="whitespace-nowrap">opencash@protonmail.ch</p>
             </div>
 
             {/* Cashu Ecosystem */}
-            <div className="pl-32">
+            <div className="md:pl-32">
               <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Cashu</p>
               <a href="https://www.cashu.space" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                 Cashu.space
