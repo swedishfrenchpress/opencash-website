@@ -82,10 +82,16 @@ export default function Home() {
               <h1 className="text-4xl md:text-7xl text-zinc-800 font-regular mb-4 text-left">
                 Support the open-source development of digital cash.
               </h1>
-              <ScrambleText 
-                text="Donate now"
-                className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-zinc-700 mt-4"
-              />
+              <a 
+                href="https://pay.withbitcoin.org/api/v1/invoices?storeId=RbgfGTkSr2o1hxjpAv11L6tzq2DHbztHX8BLrsN6Hmn&currency=BTC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ScrambleText 
+                  text="Donate now"
+                  className="bg-zinc-800 text-white font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-zinc-700 mt-4"
+                />
+              </a>
               
               {/* Supported By Logos */}
               <div className="mt-8 md:mt-16">
@@ -238,14 +244,22 @@ export default function Home() {
             </div>
             
             {/* Right Column - Content */}
-            <div className="w-full md:w-2/3 space-y-6">
+            <div className="w-full md:w-2/3 space-y-8 md:space-y-8">
               <p className="text-lg font-medium">
                 We provide funding to developers through our grants program, and we support the broader Cashu ecosystem through our research and events. All projects that we support are open-source and free to use. Help us provide sustainable support for Cashu projects by donating to our fund. Your donation will be used to support developers, fund research, and organize events.
               </p>
-              <ScrambleText 
-                text="Donate now"
-                className="bg-white text-black font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-gray-100 inline-block"
-              />
+              <div className="mt-8">
+                <a 
+                  href="https://pay.withbitcoin.org/api/v1/invoices?storeId=RbgfGTkSr2o1hxjpAv11L6tzq2DHbztHX8BLrsN6Hmn&currency=BTC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ScrambleText 
+                    text="Donate now"
+                    className="bg-white text-black font-semibold text-lg md:text-xl px-6 py-4 md:px-8 md:py-6 rounded-md hover:bg-gray-100 inline-block"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </RevealOnScroll>
