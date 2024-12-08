@@ -67,8 +67,8 @@ export default function Home() {
                 height={60}
                 className="mb-8"
               />
-              <h1 className="text-7xl text-zinc-800 font-medium mb-4 text-left">
-                Support the open-source development of Digital Cash
+              <h1 className="text-7xl text-zinc-800 font-regular mb-4 text-left">
+                Support the open-source development of digital cash.
               </h1>
               <button className="bg-zinc-800 text-white font-semibold text-xl px-8 py-6 rounded-md hover:bg-zinc-700 mt-4">
                 Donate now
@@ -80,9 +80,9 @@ export default function Home() {
                 <div className="flex items-center gap-12">
                   <div className="bg-white p-8 rounded-lg shadow-sm flex items-center justify-center w-64 h-32">
                     <Image
-                      src="/block.png"
-                      alt="Block Logo"
-                      width={160}
+                      src="/spiral.svg"
+                      alt="Spiral Logo"
+                      width={110}
                       height={80}
                       className="object-contain"
                     />
