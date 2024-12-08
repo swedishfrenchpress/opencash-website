@@ -52,8 +52,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="h-screen relative overflow-hidden">
-        {/* Background layers remain the same */}
+      <section className="min-h-screen relative overflow-y-auto overflow-x-hidden">
+        {/* Change fixed to absolute for all background elements */}
         <video
           autoPlay
           loop
@@ -64,14 +64,14 @@ export default function Home() {
           <source src="/pattern-1.mp4" type="video/mp4" />
         </video>
         
-        {/* Noise effect and other background layers remain unchanged */}
+        {/* Background layers with absolute positioning */}
         <div className="absolute inset-0 [background-image:url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')] opacity-[0.15] mix-blend-overlay" />
         <div className="absolute inset-0 bg-white opacity-75" />
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-200/40 to-blue-400/40" />
 
-        <div className="relative h-full flex flex-col justify-end z-10 max-w-7xl mx-auto px-6 md:px-28 pb-12 md:pb-48">
+        <div className="relative min-h-screen flex flex-col justify-start md:justify-end z-10 max-w-7xl mx-auto px-6 md:px-28 pb-12 md:pb-48">
           <RevealOnScroll>
-            <div className="max-w-8xl">
+            <div className="max-w-8xl pt-24 md:pt-0">
               <Image 
                 src="/opencash-logo.svg" 
                 alt="OpenCash Large Logo" 
@@ -113,7 +113,7 @@ export default function Home() {
                     <Image
                       src="/strike.webp"
                       alt="Strike Logo"
-                      width={260}
+                      width={200}
                       height={90}
                       className="object-contain invert"
                     />
@@ -212,14 +212,13 @@ export default function Home() {
               The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
             </p>
             <RevealOnScroll blur>
-              <div className="flex justify-center items-center mx-auto h-[400px] w-full">
+              <div className="flex justify-center items-center max-w-6xl mx-auto h-[400px] w-full">
                 <Image 
                   src="/board.jpg" 
                   alt="Board Members" 
                   width={1200} 
                   height={800}
-                  className="rounded-sm w-full h-full object-cover"
-                  priority
+                  className="rounded-sm w-full h-full object-contain"
                 />
               </div>
             </RevealOnScroll>
