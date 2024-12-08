@@ -136,7 +136,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-28">
           <RevealOnScroll>
             <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Vision</p>
-            <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800">A world with digital cash</h2>
+            <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800">A world with digital cash.</h2>
           </RevealOnScroll>
 
           {/* Three Column Grid */}
@@ -213,7 +213,7 @@ export default function Home() {
         <RevealOnScroll>
           <div className="max-w-7xl mx-auto px-6 md:px-28">
             <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Board</p>
-            <h2 className="text-4xl md:text-[64px] mb-8 text-zinc-800">Who we are</h2>
+            <h2 className="text-4xl md:text-[64px] mb-8 text-zinc-800">Who we are.</h2>
             <p className="text-gray-600 mt-2 text-lg font-medium max-w-6xl mb-6 md:mb-12">
               The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
             </p>
@@ -239,7 +239,7 @@ export default function Home() {
             {/* Left Column - Header */}
             <div className="w-full md:w-1/3">
               <h2 className="text-4xl md:text-[64px] text-white leading-tight md:leading-[1.1]">
-                Your donation makes a difference
+                Your donation makes a difference.
               </h2>
             </div>
             
