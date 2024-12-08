@@ -34,8 +34,8 @@ export default function Home() {
             />
           </div>
           <div className="flex gap-6 md:gap-12 items-center">
-            <a href="#vision" className={`text-zinc-800 text-sm md:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>The Vision</a>
-            <a href="#board" className={`text-zinc-800 text-sm md:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>Our Board</a>
+            <a href="#vision" className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>The Vision</a>
+            <a href="#board" className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase ${robotoMono.className}`}>Our Board</a>
           </div>
         </div>
       </nav>
@@ -118,14 +118,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-28">
           <RevealOnScroll>
             <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Vision</p>
-            <h2 className="text-4xl md:text-[64px] mb-12 md:mb-24 text-zinc-800">A world with digital cash</h2>
+            <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800">A world with digital cash</h2>
           </RevealOnScroll>
 
           {/* Three Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 relative select-text">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 relative select-text">
             {/* Hide vertical lines on mobile */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none hidden md:block">
-              <div className="grid grid-cols-3 h-full">
+              <div className="grid grid-cols-3 h-full mx-0">
                 <div className="border-l border-r border-gray-200 h-full"></div>
                 <div className="border-r border-gray-200 h-full"></div>
                 <div></div>
@@ -151,7 +151,7 @@ export default function Home() {
               }
             ].map((column, index) => (
               <RevealOnScroll key={index}>
-                <div className={`px-0 md:${index === 0 ? 'pl-16 pr-8' : index === 2 ? 'pl-4 pr-0' : 'px-8'}`}>
+                <div className="px-4 md:px-8">
                   <p className="text-2xl md:text-3xl text-gray-400 mb-8 md:mb-32">{column.number}</p>
                   <h4 className="text-2xl text-gray-800 font-semibold mb-6">
                     {column.title}
@@ -174,10 +174,11 @@ export default function Home() {
               <Image 
                 src="/chaum.jpg" 
                 alt="Quote Author" 
-                width={200}
-                height={200}
-                className="grayscale rounded-sm w-full md:w-[300px] md:h-[300px]"
+                width={300}
+                height={300}
+                className="grayscale rounded-sm w-full md:w-[300px] object-cover"
               />
+              <p className="text-gray-500 text-sm mt-2">Courtesy of Piaras Ó Mídheach</p>
             </div>
             <div className="w-full md:w-2/3 space-y-4 md:space-y-6">
               <blockquote className={`text-xl md:text-3xl leading-relaxed ${crimsonText.className}`}>
