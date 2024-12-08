@@ -228,24 +228,24 @@ export default function Home() {
       <footer className="bg-black text-white py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-28">
           {/* Footer Content */}
-          <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 space-y-8 md:space-y-0 md:divide-x divide-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 space-y-8 md:space-y-0 md:gap-24">
             {/* Location Section */}
-            <div className="md:pr-32">
-              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Location</p>
-              <p className="whitespace-nowrap">Opencash Association</p>
-              <p className="whitespace-nowrap">4613 Rickenbach, Switzerland</p>
+            <div className="w-full md:w-auto">
+              <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Location</p>
+              <p className="text-xl">Opencash Association</p>
+              <p className="text-xl">4613 Rickenbach, Switzerland</p>
             </div>
             
             {/* Contact Section */}
-            <div className="md:px-32">
-              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Contact</p>
-              <p className="whitespace-nowrap">opencash@protonmail.ch</p>
+            <div className="w-full md:w-auto">
+              <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Contact</p>
+              <p className="text-xl">opencash@protonmail.ch</p>
             </div>
 
             {/* Cashu Ecosystem */}
-            <div className="md:pl-32">
-              <p className="text-gray-400 uppercase tracking-wider text-sm mb-4">Cashu</p>
-              <a href="https://www.cashu.space" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+            <div className="w-full md:w-auto">
+              <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Cashu</p>
+              <a href="https://www.cashu.space" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-gray-300">
                 Cashu.space
               </a>
             </div>
