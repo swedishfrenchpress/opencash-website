@@ -21,7 +21,7 @@ const crimsonText = CrimsonText({
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <div className="min-h-screen w-full overflow-hidden">
       Navigation
       <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30 rounded-b-xl">
         <div className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto px-6 md:px-28">
@@ -52,7 +52,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen relative overflow-y-auto overflow-x-hidden">
+      <section className="min-h-screen relative">
         {/* Change fixed to absolute for all background elements */}
         <video
           autoPlay
