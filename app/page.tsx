@@ -253,35 +253,37 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-black text-white py-8 md:py-12">
-        {/* Gradient Divider */}
+        {/* Gradient Divider - Outside RevealOnScroll */}
         <div className="max-w-7xl mx-auto px-6 md:px-28 mb-8 md:mb-12">
           <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-50" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-28">
-          {/* Footer Content */}
-          <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 space-y-8 md:space-y-0 md:gap-24">
-            {/* Location Section */}
-            <div className="w-full md:w-auto">
-              <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Location</p>
-              <p className="text-xl">OpenCash Association</p>
-              <p className="text-xl">4613 Rickenbach, Switzerland</p>
-            </div>
-            
-            {/* Contact Section */}
-            <div className="w-full md:w-auto">
-              <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Contact</p>
-              <p className="text-xl">opencash@protonmail.ch</p>
-            </div>
+          {/* Footer Content - Inside RevealOnScroll */}
+          <RevealOnScroll>
+            <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 space-y-8 md:space-y-0 md:gap-24">
+              {/* Location Section */}
+              <div className="w-full md:w-auto">
+                <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Location</p>
+                <p className="text-xl">OpenCash Association</p>
+                <p className="text-xl">4613 Rickenbach, Switzerland</p>
+              </div>
+              
+              {/* Contact Section */}
+              <div className="w-full md:w-auto">
+                <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Contact</p>
+                <p className="text-xl">opencash@protonmail.ch</p>
+              </div>
 
-            {/* Cashu Ecosystem */}
-            <div className="w-full md:w-auto">
-              <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Cashu</p>
-              <a href="https://cashu.space/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-gray-300">
-                Cashu.space
-              </a>
+              {/* Cashu Ecosystem */}
+              <div className="w-full md:w-auto">
+                <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Cashu</p>
+                <a href="https://cashu.space/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-gray-300">
+                  Cashu.space
+                </a>
+              </div>
             </div>
-          </div>
+          </RevealOnScroll>
 
           {/* Logomark below */}
           <div className="flex justify-center">
