@@ -302,7 +302,7 @@ export default function Home() {
           {/* Logomark below */}
           <div className="flex justify-center">
             <div 
-              className="relative cursor-pointer select-none"
+              className="relative select-none"
               onDragStart={(e) => e.preventDefault()}
               onClick={(e) => {
                 // Create multiple emojis for an explosion effect
