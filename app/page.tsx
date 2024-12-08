@@ -97,7 +97,7 @@ export default function Home() {
               <div className="mt-8 md:mt-16">
                 <p className={`text-gray-600 text-xl md:text-3xl mb-4 md:mb-8 text-left uppercase ${robotoMono.className}`}>Supported by</p>
                 <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-                  <div className="bg-white p-4 md:p-8 shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
+                  <div className="bg-white p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                     <Image
                       src="/spiral.svg"
                       alt="Spiral Logo"
@@ -106,7 +106,7 @@ export default function Home() {
                       className="object-contain md:w-[110px] md:h-[80px]"
                     />
                   </div>
-                  <div className="bg-white p-4 md:p-8 shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
+                  <div className="bg-white p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                     <Image
                       src="/hrf.png"
                       alt="Human Rights Foundation Logo"
@@ -115,7 +115,7 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="bg-white p-4 md:p-8 shadow-sm flex items-center justify-center w-full md:w-64 h-24 md:h-32">
+                  <div className="bg-white p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                     <Image
                       src="/strike.webp"
                       alt="Strike Logo"
