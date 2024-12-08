@@ -125,9 +125,9 @@ export default function Home() {
             {/* Vertical Lines */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
               <div className="grid grid-cols-3 h-full">
+                <div className="border-l border-r border-gray-200 h-full"></div>
                 <div className="border-r border-gray-200 h-full"></div>
-                <div className="border-r border-gray-200 h-full"></div>
-                <div className="border-r border-gray-200 h-full"></div>
+                <div></div>
               </div>
             </div>
 
@@ -150,7 +150,7 @@ export default function Home() {
               }
             ].map((column, index) => (
               <RevealOnScroll key={index}>
-                <div className="px-8">
+                <div className={`${index === 0 ? 'pl-16 pr-8' : index === 2 ? 'pl-4 pr-0' : 'px-8'}`}>
                   <p className="text-3xl text-gray-400 mb-32">{column.number}</p>
                   <h4 className="text-2xl text-gray-800 font-semibold mb-6">
                     {column.title}
