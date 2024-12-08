@@ -22,7 +22,7 @@ export const RevealOnScroll = ({ children, blur = false }: { children: React.Rea
       transition={{ 
         duration: 0.6, 
         ease: "easeOut",
-        filter: { duration: 1.0 } // Longer duration for blur effect
+        filter: { duration: 0.6 } // Longer duration for blur effect
       }}
     >
       {children}
