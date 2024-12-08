@@ -212,7 +212,7 @@ export default function Home() {
               The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
             </p>
             <RevealOnScroll blur>
-              <div className="flex justify-center items-center max-w-6xl mx-auto h-[400px] w-full">
+              <div className="flex justify-center items-center max-w-6xl mx-auto h-[200px] md:h-[400px] w-full">
                 <Image 
                   src="/board.jpg" 
                   alt="Board Members" 
@@ -234,7 +234,7 @@ export default function Home() {
             {/* Location Section */}
             <div className="w-full md:w-auto">
               <p className={`text-gray-400 uppercase tracking-wider text-lg mb-4 ${robotoMono.className}`}>Location</p>
-              <p className="text-xl">Opencash Association</p>
+              <p className="text-xl">OpenCash Association</p>
               <p className="text-xl">4613 Rickenbach, Switzerland</p>
             </div>
             
