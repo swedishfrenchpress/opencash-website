@@ -111,7 +111,7 @@ export default function Home() {
                 
                 {/* Supported By Logos */}
                 <div className="mt-8 md:mt-16">
-                  <p className={`text-gray-600 text-xl md:text-3xl mb-4 md:mb-8 text-left uppercase ${robotoMono.className}`}>Supported by</p>
+                  <p className={`text-zinc-600 text-xl md:text-3xl mb-4 md:mb-8 text-left uppercase ${robotoMono.className}`}>Supported by</p>
                   <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
                     <div className="bg-white p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                       <Image
@@ -151,7 +151,7 @@ export default function Home() {
         <section id="vision" className="py-12 md:py-20 bg-zinc-50">
           <div className="max-w-7xl mx-auto px-6 md:px-28">
             <RevealOnScroll>
-              <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Vision</p>
+              <p className="text-zinc-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Vision</p>
               <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800">A world with digital cash.</h2>
             </RevealOnScroll>
 
@@ -186,11 +186,11 @@ export default function Home() {
               ].map((column, index) => (
                 <RevealOnScroll key={index}>
                   <div className="px-4 md:px-8">
-                    <p className="text-2xl md:text-3xl text-gray-400 mb-8 md:mb-32">{column.number}</p>
-                    <h4 className="text-2xl text-gray-800 font-semibold mb-6">
+                    <p className="text-2xl md:text-3xl text-zinc-400 mb-8 md:mb-32">{column.number}</p>
+                    <h4 className="text-2xl text-zinc-800 font-semibold mb-6">
                       {column.title}
                     </h4>
-                    <p className="text-gray-600 text-lg font-medium">
+                    <p className="text-zinc-600 text-lg font-medium">
                       {column.content}
                     </p>
                   </div>
@@ -212,13 +212,13 @@ export default function Home() {
                   height={300}
                   className="grayscale rounded-sm w-full md:w-[300px] object-cover"
                 />
-                <p className="text-gray-500 text-sm mt-2">Photo courtesy of Piaras Ó Mídheach</p>
+                <p className="text-zinc-400 text-sm mt-2">Photo courtesy of Piaras Ó Mídheach</p>
               </div>
               <div className="w-full md:w-2/3 space-y-4 md:space-y-6">
                 <blockquote className={`text-xl md:text-3xl leading-relaxed ${crimsonText.className}`}>
                   "...in one direction lies unprecedented scrutiny and control of people's lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates."
                 </blockquote>
-                <p className="text-gray-400 text-lg md:text-xl">— David Chaum 1992</p>
+                <p className="text-zinc-400 text-lg md:text-xl">— David Chaum 1992</p>
               </div>
             </div>
           </RevealOnScroll>
@@ -228,9 +228,9 @@ export default function Home() {
         <section id="board" className="py-12 md:py-20 bg-zinc-50">
           <RevealOnScroll>
             <div className="max-w-7xl mx-auto px-6 md:px-28">
-              <p className="text-gray-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Board</p>
+              <p className="text-zinc-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Board</p>
               <h2 className="text-4xl md:text-[64px] mb-8 text-zinc-800">Who we are.</h2>
-              <p className="text-gray-600 mt-2 text-lg font-medium max-w-6xl mb-6 md:mb-12">
+              <p className="text-zinc-600 mt-2 text-lg font-medium max-w-6xl mb-6 md:mb-12">
                 The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
               </p>
               <RevealOnScroll blur>
