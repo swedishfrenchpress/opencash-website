@@ -216,7 +216,7 @@ export default function Home() {
               </div>
               <div className="w-full md:w-2/3 space-y-4 md:space-y-6">
                 <blockquote className={`text-xl md:text-3xl leading-relaxed ${crimsonText.className}`}>
-                  "...in one direction lies unprecedented scrutiny and control of people's lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates."
+                  "In one direction lies unprecedented scrutiny and control of people's lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates."
                 </blockquote>
                 <p className="text-zinc-400 text-lg md:text-xl">— David Chaum 1992</p>
               </div>
