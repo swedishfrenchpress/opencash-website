@@ -34,13 +34,13 @@ export default function Home() {
     <div className="min-h-screen w-full overflow-hidden">
       {/* Loading Screen */}
       {isLoading && (
-        <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-zinc-900 z-50 flex items-center justify-center">
           <Image 
             src="/opencash-logomark.svg" 
             alt="OpenCash Logo" 
             width={60} 
             height={60}
-            className="animate-pulse"
+            className="animate-spin invert"
           />
         </div>
       )}
