@@ -1,31 +1,58 @@
 'use client'
 
-import { motion } from "framer-motion";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-export const RevealOnScroll = ({ children, blur = false }: { children: React.ReactNode, blur?: boolean }) => {
-  const [isClient, setIsClient] = useState(false);
+interface RevealOnScrollProps {
+  children: React.ReactNode;
+  blur?: boolean;
+}
+
+export function RevealOnScroll({ children, blur = false }: RevealOnScrollProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    // Mark component as loaded after mount
+    setIsLoaded(true);
 
-  if (!isClient) {
-    return <div className="opacity-100">{children}</div>; // Non-animated fallback
-  }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Only trigger animation if the page is loaded
+        if (isLoaded && entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [isLoaded]);
+
+  const baseClasses = "transition-all duration-1000";
+  const visibilityClasses = isVisible
+    ? "opacity-100 translate-y-0"
+    : "opacity-0 translate-y-8";
+  const blurClasses = blur && !isVisible ? "blur-sm" : "blur-0";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50, filter: blur ? "blur(20px)" : "blur(0px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ 
-        duration: 0.6, 
-        ease: "easeOut",
-        filter: { duration: 0.6 } // Longer duration for blur effect
-      }}
+    <div
+      ref={ref}
+      className={`${baseClasses} ${visibilityClasses} ${blurClasses}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
-}; 
+} 
