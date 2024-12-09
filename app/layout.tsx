@@ -29,6 +29,8 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
+        alt: 'Opencash Association',
+        type: 'image/jpeg',
       }
     ],
     locale: 'en_US',
@@ -36,7 +38,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.ico',
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Opencash Association',
+    description: 'Support the open-source development of digital cash through the Cashu protocol.',
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({

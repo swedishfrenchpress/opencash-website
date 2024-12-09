@@ -31,7 +31,7 @@ export default function Home() {
               alt="OpenCash Logo" 
               width={40} 
               height={40}
-              className="md:w-[50px] md:h-[50px]"
+              className="md:w-[50px] md:h-[px]"
             />
           </a>
           <div className="flex gap-6 md:gap-12 items-center">
