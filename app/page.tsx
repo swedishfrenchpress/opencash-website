@@ -24,7 +24,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Wait for the next frame to ensure initial render is complete
+    // Remove loading state immediately after initial render
     requestAnimationFrame(() => {
       setIsLoading(false);
     });
@@ -32,21 +32,27 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full overflow-hidden">
-      {/* Loading Screen */}
+      {/* Loading Screen with matching hero background */}
       {isLoading && (
-        <div className="fixed inset-0 bg-zinc-900 z-50 flex items-center justify-center">
-          <Image 
-            src="/opencash-logomark.svg" 
-            alt="OpenCash Logo" 
-            width={60} 
-            height={60}
-            className="animate-spin invert"
-          />
+        <div className="fixed inset-0 z-50">
+          {/* Matching background layers */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-100 [filter:invert(100%)_contrast(100%)_brightness(100%)_blur(2px)]"
+          >
+            <source src="/pattern-1.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 [background-image:url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')] opacity-[0.15] mix-blend-overlay" />
+          <div className="absolute inset-0 bg-white opacity-75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-200/40 to-blue-400/40" />
         </div>
       )}
 
-      {/* Existing content wrapped in opacity transition */}
-      <div className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      {/* Rest of your content */}
+      <div className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         Navigation
         <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30">
           <div className="flex justify-between items-center p-2 md:p-3 max-w-7xl mx-auto px-6 md:px-28">
