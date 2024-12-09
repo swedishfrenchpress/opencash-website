@@ -23,15 +23,15 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full overflow-hidden">
       Navigation
-      <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30 rounded-b-xl">
-        <div className="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto px-6 md:px-28">
+      <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30">
+        <div className="flex justify-between items-center p-2 md:p-3 max-w-7xl mx-auto px-6 md:px-28">
           <a href="/" className="p-2 rounded hover:opacity-80 transition-opacity">
             <Image 
               src="/opencash-logomark.svg" 
               alt="OpenCash Logo" 
               width={40} 
               height={40}
-              className="md:w-[50px] md:h-[px]"
+              className="md:w-[50px] md:h-[50px]"
             />
           </a>
           <div className="flex gap-6 md:gap-12 items-center">
