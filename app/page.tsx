@@ -124,7 +124,7 @@ export default function Home() {
                     </div>
                     <div className="bg-white p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32">
                       <Image
-                        src="/hrf.png"
+                        src="/hrf.svg"
                         alt="Human Rights Foundation Logo"
                         width={200}
                         height={100}
