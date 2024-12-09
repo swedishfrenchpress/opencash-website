@@ -251,20 +251,20 @@ export default function Home() {
         {/* Donation Section */}
         <section className="bg-black text-white py-24 md:py-48">
           <RevealOnScroll>
-            <div className="max-w-7xl mx-auto px-6 md:px-28 flex flex-col md:flex-row gap-8 md:gap-12">
+            <div className="max-w-7xl mx-auto px-6 md:px-28 flex flex-col lg:flex-row gap-8 lg:gap-12">
               {/* Left Column - Header */}
-              <div className="w-full md:w-1/3">
-                <h2 className="text-4xl md:text-[64px] text-white leading-tight md:leading-[1.1]">
+              <div className="w-full lg:w-1/3">
+                <h2 className="text-4xl md:text-[64px] text-white leading-tight md:leading-[1.1] mb-0 lg:mb-0">
                   Your donation makes a difference.
                 </h2>
               </div>
               
               {/* Right Column - Content */}
-              <div className="w-full md:w-2/3 space-y-8 md:space-y-8">
+              <div className="w-full lg:w-2/3 space-y-8">
                 <p className="text-lg font-medium">
                   We provide funding to developers through our grants program, and we support the broader Cashu ecosystem through our research and events. All projects that we support are open-source and free to use. Help us provide sustainable support for Cashu projects by donating to our fund. Your donation will be used to support developers, fund research, and organize events.
                 </p>
-                <div className="mt-8">
+                <div>
                   <a 
                     href="https://pay.withbitcoin.org/api/v1/invoices?storeId=RbgfGTkSr2o1hxjpAv11L6tzq2DHbztHX8BLrsN6Hmn&currency=BTC"
                     target="_blank"
