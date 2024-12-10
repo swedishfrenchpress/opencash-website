@@ -158,3 +158,8 @@ html {
 .reveal-blur.visible {
   filter: blur(0);
 }
+
+/* Hide Next.js Static Route Indicator */
+#__next-build-watcher {
+  display: none;
+}
