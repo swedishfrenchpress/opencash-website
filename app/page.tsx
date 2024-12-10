@@ -152,7 +152,9 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 md:px-28">
             <RevealOnScroll>
               <p className="text-zinc-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Vision</p>
-              <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800">A world with digital cash.</h2>
+              <h2 className="text-4xl md:text-[64px] mb-12 md:mb-48 text-zinc-800 leading-tight md:leading-[1.1]">
+                A world with digital cash.
+              </h2>
             </RevealOnScroll>
 
             {/* Three Column Grid */}
