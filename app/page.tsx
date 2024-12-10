@@ -96,7 +96,7 @@ export default function Home() {
                   height={42}
                   className="mb-4 md:mb-8 md:w-[400px] md:h-[60px]"
                 />
-                <h1 className="text-4xl md:text-7xl text-zinc-800 font-regular mb-4 text-left">
+                <h1 className="text-4xl md:text-7xl text-zinc-800 font-regular mb-12 text-left">
                   Support the open-source development of digital cash.
                 </h1>
                 <a 
