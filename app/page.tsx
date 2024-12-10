@@ -50,7 +50,6 @@ export default function Home() {
 
       {/* Main content */}
       <div className={`relative z-10 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        Navigation
         <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30">
           <div className="flex justify-between items-center p-2 md:p-3 max-w-7xl mx-auto px-6 md:px-28">
             <Link href="/" className="p-2 rounded hover:opacity-80 transition-opacity">
