@@ -6,6 +6,7 @@ import { Roboto_Mono as RobotoMono } from 'next/font/google';
 import { Crimson_Text as CrimsonText } from 'next/font/google';
 import { RevealOnScroll } from './components/RevealOnScroll';
 import { ScrambleText } from './components/ScrambleButton';
+import Link from 'next/link';
 
 const robotoMono = RobotoMono({
   subsets: ['latin'],
@@ -52,7 +53,7 @@ export default function Home() {
         Navigation
         <nav className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30">
           <div className="flex justify-between items-center p-2 md:p-3 max-w-7xl mx-auto px-6 md:px-28">
-            <a href="/" className="p-2 rounded hover:opacity-80 transition-opacity">
+            <Link href="/" className="p-2 rounded hover:opacity-80 transition-opacity">
               <Image 
                 src="/opencash-logomark.svg" 
                 alt="OpenCash Logo" 
@@ -60,7 +61,7 @@ export default function Home() {
                 height={40}
                 className="md:w-[50px] md:h-[50px]"
               />
-            </a>
+            </Link>
             <div className="flex gap-6 md:gap-12 items-center">
               <ScrambleText 
                 as="a"
@@ -218,7 +219,7 @@ export default function Home() {
               </div>
               <div className="w-full md:w-2/3 space-y-4 md:space-y-6">
                 <blockquote className={`text-xl md:text-3xl leading-relaxed ${crimsonText.className}`}>
-                  "In one direction lies unprecedented scrutiny and control of people's lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates."
+                  &ldquo;In one direction lies unprecedented scrutiny and control of people&apos;s lives; in the other, secure parity between individuals and organizations. The shape of society in the next century may depend on which approach predominates.&rdquo;
                 </blockquote>
                 <p className="text-zinc-400 text-lg md:text-xl">— David Chaum 1992</p>
               </div>
@@ -233,7 +234,7 @@ export default function Home() {
               <p className="text-zinc-600 uppercase tracking-wider text-sm mb-4 md:mb-8">Our Board</p>
               <h2 className="text-4xl md:text-[64px] mb-8 text-zinc-800">Who we are.</h2>
               <p className="text-zinc-600 mt-2 text-lg font-medium max-w-6xl mb-6 md:mb-12">
-                The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members' names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
+                The OpenCash Association, based in Switzerland, is governed by a board who have earned a strong reputation in the field of Bitcoin and Chaumian ecash systems. The key board members&apos; names are not public as a security measure and to preserve their privacy. If you consider sponsoring OpenCash, they can contact you directly to confirm their identities.
               </p>
               <RevealOnScroll blur>
                 <div className="flex justify-center items-center max-w-6xl mx-auto h-[200px] md:h-[400px] w-full">
@@ -313,10 +314,12 @@ export default function Home() {
                   <ScrambleText 
                     as="a"
                     href="https://cashu.space/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
                     text="Cashu.space"
                     className="text-xl hover:text-gray-300 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gray-300 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 inline-block w-[120px]"
+                    asProps={{
+                      target: "_blank",
+                      rel: "noopener noreferrer"
+                    }}
                   />
                 </div>
               </div>

@@ -9,37 +9,28 @@ interface RevealOnScrollProps {
 
 export function RevealOnScroll({ children, blur = false }: RevealOnScrollProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Mark component as loaded after mount
-    setIsLoaded(true);
-
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Only trigger animation if the page is loaded
-        if (isLoaded && entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
+        setIsVisible(entry.isIntersecting);
       },
-      {
-        threshold: 0.1,
-        rootMargin: '50px',
-      }
+      { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, [isLoaded]);
+  }, []);
 
   const baseClasses = "transition-all duration-1000";
   const visibilityClasses = isVisible
