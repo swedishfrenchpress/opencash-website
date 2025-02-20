@@ -65,7 +65,7 @@ export default function Home() {
               <ScrambleText 
                 as="a"
                 href="#vision" 
-                text="THE VISION"
+                text="OUR VISION"
                 className={`text-zinc-800 text-base lg:text-lg font-medium hover:text-zinc-900 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-zinc-800 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 ${robotoMono.className}`}
               />
               <ScrambleText 
@@ -112,32 +112,41 @@ export default function Home() {
                 {/* Supported By Logos */}
                 <div className="mt-8 md:mt-16">
                   <p className={`text-zinc-600 text-xl md:text-3xl mb-4 md:mb-8 text-left uppercase ${robotoMono.className}`}>Supported by</p>
-                  <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-                    <div className="bg-white/60 backdrop-blur-sm p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
+                  <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                    <div className="bg-white/60 backdrop-blur-sm p-4 md:p-6 flex items-center justify-center w-full md:w-56 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
                       <Image
                         src="/spiral.svg"
                         alt="Spiral Logo"
-                        width={90}
-                        height={60}
-                        className="object-contain md:w-[110px] md:h-[80px]"
+                        width={140}
+                        height={70}
+                        className="object-contain max-w-[80%] max-h-[80%]"
                       />
                     </div>
-                    <div className="bg-white/60 backdrop-blur-sm p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
+                    <div className="bg-white/60 backdrop-blur-sm p-4 md:p-6 flex items-center justify-center w-full md:w-56 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
                       <Image
                         src="/hrf.svg"
                         alt="Human Rights Foundation Logo"
-                        width={200}
-                        height={100}
-                        className="object-contain"
+                        width={140}
+                        height={70}
+                        className="object-contain max-w-[80%] max-h-[80%]"
                       />
                     </div>
-                    <div className="bg-white/60 backdrop-blur-sm p-4 md:p-8 flex items-center justify-center w-full md:w-64 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
+                    <div className="bg-white/60 backdrop-blur-sm p-4 md:p-6 flex items-center justify-center w-full md:w-56 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
                       <Image
                         src="/strike.webp"
                         alt="Strike Logo"
-                        width={200}
-                        height={90}
-                        className="object-contain invert"
+                        width={140}
+                        height={70}
+                        className="object-contain max-w-[80%] max-h-[80%] invert"
+                      />
+                    </div>
+                    <div className="bg-white/60 backdrop-blur-sm p-4 md:p-6 flex items-center justify-center w-full md:w-56 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
+                      <Image
+                        src="/opensats.webp"
+                        alt="OpenSats Logo"
+                        width={140}
+                        height={70}
+                        className="object-contain max-w-[80%] max-h-[80%]"
                       />
                     </div>
                   </div>
@@ -178,7 +187,7 @@ export default function Home() {
                 {
                   number: "What?",
                   title: "Digital cash for everyone",
-                  content: "Digital cash is a scalable, private, and efficient way to transact. It’s an open tool that anyone can use to build a more secure financial future."
+                  content: "Digital cash is a scalable, private, and efficient way to transact. It's an open tool that anyone can use to build a more secure financial future."
                 },
                 {
                   number: "How?",
