@@ -142,7 +142,7 @@ export default function Home() {
                     </div>
                     <div className="bg-white/60 backdrop-blur-sm p-4 md:p-6 flex items-center justify-center w-full md:w-56 h-24 md:h-32 hover:bg-white/90 transition-all duration-500 ease-in-out relative after:absolute after:inset-0 after:border after:border-zinc-200/50 after:pointer-events-none">
                       <Image
-                        src="/opensats.webp"
+                        src="/opensats.png"
                         alt="OpenSats Logo"
                         width={140}
                         height={70}
